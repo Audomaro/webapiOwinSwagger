@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>webapiOwinSwagger</name>
+    </assembly>
+    <members>
+        <member name="T:webapiOwinSwagger.App_Start.SwaggerConfig">
+            <summary>
+            Configuracion para Swagger.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.App_Start.SwaggerConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Implementacion de Swagger a una configuracion.
+            </summary>
+            <param name="config">Configuracion</param>
+        </member>
+        <member name="M:webapiOwinSwagger.App_Start.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            Esta funcion optiene el archivo de comentarios relacionado al proyecto.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:webapiOwinSwagger.App_Start.WebApiConfig">
+            <summary>
+            Configuracion del WebApi.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.App_Start.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Implementacion de WebApi a una configuracion.
+            </summary>
+            <param name="config">Configuracion</param>
+        </member>
+        <member name="T:webapiOwinSwagger.Controllers.usuariosController">
+            <summary>
+            Controlador demo.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.Controllers.usuariosController.listaUsuarios">
+            <summary>
+            Hola mundo.
+            <returns>Lista de usuarios.</returns>
+            </summary>
+        </member>
+        <member name="T:webapiOwinSwagger.Models.Contextos.bibliotecaDB">
+            <summary>
+            Contexto para la base de datos.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.Models.Contextos.bibliotecaDB.#ctor">
+            <summary>
+            Inicializador del contexto.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.Models.Contextos.bibliotecaDB.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>
+             Fluent api.
+            </summary>
+            <param name="modelBuilder">modelBuilder</param>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Contextos.bibliotecaDB.usuarios">
+            <summary>
+            DbSet para usuarios.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Contextos.bibliotecaDB.domicilios">
+            <summary>
+            DbSet para los domicilios.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Contextos.bibliotecaDB.prestamos">
+            <summary>
+            DbSet para los prestamos.
+            </summary>
+        </member>
+        <member name="T:webapiOwinSwagger.Models.Objetos.domicilio">
+            <summary>
+            Datos generales del usuario.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.id">
+            <summary>
+            Id del usuario.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.calle">
+            <summary>
+            Nombre de la calle.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.numero">
+            <summary>
+            Numero de la casa.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.colonia">
+            <summary>
+            Nombre de la colonia.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.telefono">
+            <summary>
+            Telefono personal.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.domicilio.usuario">
+            <summary>
+            Relacion foranea con el usuario.
+            </summary>
+        </member>
+        <member name="T:webapiOwinSwagger.Models.Objetos.prestamo">
+            <summary>
+            Datos del prestamo.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.prestamo.id">
+            <summary>
+            Id del prestamo.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.prestamo.idUsuario">
+            <summary>
+            Id del usuario que lo solicito.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.prestamo.fecha">
+            <summary>
+            Fecha en que se realizo.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.prestamo.usuario">
+            <summary>
+            Relacion foranea con el usuario..
+            </summary>
+        </member>
+        <member name="T:webapiOwinSwagger.Models.Objetos.usuario">
+            <summary>
+            Datos principales del Usuario.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.usuario.id">
+            <summary>
+            Id Usuario.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.usuario.nombre">
+            <summary>
+            Nombre completo.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.usuario.fechaNacimiento">
+            <summary>
+            Fecha de nacimiento.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.usuario.domicilio">
+            <summary>
+            Relacion foranea con el domicilio.
+            </summary>
+        </member>
+        <member name="P:webapiOwinSwagger.Models.Objetos.usuario.prestamos">
+            <summary>
+            Relacion foranea con los prestamos.
+            </summary>
+        </member>
+        <member name="T:webapiOwinSwagger.Startup">
+            <summary>
+            App OWIN.
+            </summary>
+        </member>
+        <member name="M:webapiOwinSwagger.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configuracion de Startup.
+            </summary>
+            <param name="app">Hace referencia a la aplicacion.</param>
+        </member>
+    </members>
+</doc>
