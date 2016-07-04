@@ -17,6 +17,7 @@ namespace webapiOwinSwagger.Controllers
         /// Hola mundo.
         /// <returns>Lista de usuarios.</returns>
         /// </summary>
+        [Authorize]
         [HttpGet]
         [ResponseType(typeof(List<usuario>))]
         [Route("listaUsuarios")]

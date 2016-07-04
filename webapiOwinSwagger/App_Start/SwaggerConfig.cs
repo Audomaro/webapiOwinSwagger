@@ -1,7 +1,5 @@
-using System.Web.Http;
-using WebActivatorEx;
-using webapiOwinSwagger;
 using Swashbuckle.Application;
+using System.Web.Http;
 
 namespace webapiOwinSwagger.App_Start
 {
@@ -33,7 +31,7 @@ namespace webapiOwinSwagger.App_Start
         /// <returns></returns>
         private static string GetXmlCommentsPath()
         {
-            return string.Format(@"{0}\XmlComments.xml", System.AppDomain.CurrentDomain.BaseDirectory);
+            return $" {System.AppDomain.CurrentDomain.BaseDirectory }\\bin\\webapiOwinSwagger.XML";
         }
     }
 }
